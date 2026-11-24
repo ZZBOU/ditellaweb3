@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feria de Café Plaza Armenia</title>
+
+        <!-- Link a Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+        <!-- Link a Bootstrap js que incluye popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Feria de Café</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="miMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#tostadores">Tostadores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recomendaciones">Antes de ir</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#lugar">Cómo llegar</a></li>
+                        <li>
+                            <button class="btn boton" data-bs-toggle="modal" data-bs-target="#miModal">Escribinos</button>
+                        </li> <!--boton que abre el modal-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <header>
+            <h1>Feria de Café Plaza Armenia</h1>
+            <p class="lead">Un fin de semana para tomarse las cosas con calma: tostadores de acá, granos de distintos orígenes y gente que se puede quedar una hora hablando de un espresso.</p>
+            <p class="fecha">Sábado 12 y domingo 13 de diciembre de 2026, de 10 a 18 hs. Plaza Armenia, Palermo, CABA.</p>
+
+            <a href="#tostadores" class="btn boton mt-2">Ver quiénes vienen</a>
+            <button id="tema" class="btn boton mt-2">Modo oscuro / claro</button>
+        </header>
+    <!--fin del header-->
+
+        <main class="container my-4">
+
+            <!-- las tarjetas se cargan desde datos.json -->
+            <section class="seccion" id="tostadores">
+                <h2>Quiénes están este año</h2>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>Estos son los puestos que confirmaron para los dos días. Algunos traen la máquina de espresso, otros solo el molino y un par de chemex.</p>
+                    </div>
+                </div>
+
+                <!-- aca adentro van las columnas con las tarjetas -->
+                <div class="row g-3" id="contenedor"></div>
+            </section>
+
+
+            <section class="seccion" id="recomendaciones">
+                <h2>Antes de ir</h2>
+                <p>Un par de cosas que conviene tener en cuenta, sobre todo si es la primera vez que vas a una feria de estas.</p>
+
+                <ul>
+                    <li>Llevar efectivo. Varios puestos no tienen QR y una taza suele estar entre 4 y 7 mil pesos.</li>
+                    <li>Si te vas a llevar granos, una bolsa o mochila. Los paquetes de 250 g ocupan más de lo que parece.</li>
+                    <li>Ir con un poco de hambre no viene mal, hay medialunas y facturas.</li>
+                    <li>Si hace sol, gorra. En la plaza a mediodía hay poca sombra.</li>
+                    <li>Preguntá de dónde viene el grano. A la mayoría les gusta explicar el origen y cómo lo tuestan.</li>
+                </ul>
+            </section>
+
+
+            <section class="seccion">
+                <h2>La banda sonora de la feria</h2>
+                <p>Jazz suave de fondo, taza en la mano, sin apuro. Si nunca fuiste a algo así, poné esto y te das una idea.</p>
+
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWVqfgj8NZEp1?utm_source=generator" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Playlist de jazz para tomar café"></iframe>
+            </section>
+
+
+            <section class="seccion" id="lugar">
+                <h2>Cómo llegar</h2>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="feria-cafe.jpg" class="img-fluid foto mb-3 border border-3" alt="Café en la plaza durante la feria">
+                    </div>
+
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <p>Plaza Armenia queda en Palermo, entre Honduras y Costa Rica. Si entrás por Scalabrini Ortiz, caminás tres cuadras y ya ves las mesas.</p>
+
+                        <h3>Si vas en bici</h3>
+                        <p>Hay paradores en Honduras y en Costa Rica. El más tranquilo suele ser el de Guatemala, a una cuadra de la plaza.</p>
+
+                        <h3>Si vas en bondi o subte</h3>
+                        <p>La estación Plaza Italia de la línea D queda a unas cuadras. También llegan el 39, el 93, el 111 y el 55.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main> <!--fin del main-->
+
+        <footer>
+            <p>2026 Feria de Café Plaza Armenia. Todos los derechos reservados.</p>
+            <p><a href="https://www.instagram.com/" target="_blank">Instagram</a> - <a href="https://open.spotify.com/playlist/37i9dQZF1DWVqfgj8NZEp1" target="_blank">Spotify</a></p>
+        </footer>
+
+
+        <!--inicio del modal -->
+        <div class="modal fade" id="miModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Escribinos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form id="miFormulario" method="post" novalidate class="needs-validation">
+
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre Apellido" required>
+                                <div class="invalid-feedback">Te olvidaste de poner el nombre</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@email.com" required>
+                                <div class="invalid-feedback">Ingresá un email válido.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="dia" class="form-label">¿Qué día pensás ir?</label>
+                                <select class="form-select" name="dia" id="dia" required>
+                                    <option value="" selected disabled>Elegí un día</option>
+                                    <option value="sabado">Sábado</option>
+                                    <option value="domingo">Domingo</option>
+                                    <option value="los-dos">Los dos</option>
+                                </select>
+                                <div class="invalid-feedback">Elegí una opción.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                            </div>
+
+                            <button class="btn boton">Enviar</button>
+                        </form>
+
+                        <div id="mensajeGracias" class="d-none">¡Gracias por escribirnos! Te contestamos por mail.</div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--cierre del modal -->
+
+        <script src="script.js"></script>
+    </body>
+</html>

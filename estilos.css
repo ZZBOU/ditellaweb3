@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* colores de la feria */
+:root {
+
+    --marron: #4a2c18;
+    --acento: #8b5a2b;
+    --dorado: #d4a574;
+    --crema: #fffaf3;
+
+}
+
+
+html {font-size: 16px;}  /* 16px = 1rem */
+
+
+body {
+
+    font-family: "Roboto", sans-serif;
+    color: #3b2618;
+    background-color: #f3e9dc;
+
+}
+
+
+/* pacifico tiene un solo peso (400), si no lo pongo bootstrap le pone 500 a los titulos */
+h1, h2, .navbar-brand {
+
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+
+}
+
+
+h3, h5 {font-weight: 700;}
+
+
+.navbar {
+
+    background-color: var(--marron);
+    border-bottom: 3px solid var(--dorado);
+
+}
+
+
+.navbar-brand {font-size: 1.5rem;}
+
+
+header {
+
+    width: 100%;
+    padding: 3rem 10%;
+    background-color: var(--marron);
+    color: #f4eadc;
+    text-align: center;
+    border-bottom: 5px solid var(--dorado);
+
+}
+
+
+h1 {font-size: 3rem;}
+
+
+/* piso la clase lead de bootstrap */
+.lead {
+
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+
+
+.fecha {font-style: italic;}
+
+
+/* botones con degradado */
+.boton {
+
+    font-weight: bold;
+    padding: 0.6em 1.5em;
+    color: white;
+    background-image: linear-gradient(to right, #8b5a2b, #c68b59);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    transition: all 0.5s;
+
+}
+
+
+.boton:hover {
+
+    color: white;
+    background-image: linear-gradient(to right, #c68b59, #8b5a2b);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+
+}
+
+
+.seccion {
+
+    margin-bottom: 30px;
+    padding: 2rem;
+    background-color: var(--crema);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+}
+
+
+.seccion h2 {
+
+    font-size: 2rem;
+    color: var(--acento);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--acento);
+
+}
+
+
+/* tarjetas que vienen del json */
+.tarjeta {
+    background-color: #f3e9dc;
+}
+
+
+/* el color del borde de bootstrap (en las tarjetas y en la foto), sin el important no cambiaba */
+.tarjeta, .foto {
+    border-color: var(--acento) !important;
+}
+
+
+.tarjeta h3 {
+
+    font-size: 1.3rem;
+    color: var(--acento);
+
+}
+
+
+.detalles {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+
+#recomendaciones li {
+    padding: 4px 0;
+}
+
+
+iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* la foto de la plaza */
+.foto {
+
+    border-radius: 10px;
+    transition: all 1s;
+
+}
+
+
+.foto:hover {
+
+    transform: rotate(2deg);
+    opacity: 0.8;
+
+}
+
+
+#lugar h3 {font-size: 1.2rem;}
+
+
+footer {
+
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--marron);
+    color: #f4eadc;
+    text-align: center;
+
+}
+
+
+footer a {color: var(--dorado);}
+
+
+/* modo oscuro, la clase se pone en el body con el boton */
+.dark {
+
+    background-color: #1a100c;
+    color: #f4eadc;
+
+}
+
+
+.dark .seccion {background-color: #3d2a1c;}
+
+.dark .tarjeta {background-color: #2b1d14;}
+
+.dark .seccion h2, .dark h3 {color: var(--dorado);}
